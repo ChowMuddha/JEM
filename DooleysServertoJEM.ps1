@@ -17,7 +17,7 @@ $RemovalPath = "C:\JEM\Agent_Uninstall.zip"
 Remove-Item $RemovalPath -Force -Recurse
 
 #Will need to generate new agent download URL and update below based offsite location
-Invoke-WebRequest -Uri "https://automate.jem.com.au/LabTech/Deployment.aspx?InstallerToken=4944bf03882449249930f75ea3b2bc3f" -OutFile "C:\JEM\Dooleys_ServersJEM.MSI";
+Invoke-WebRequest -Uri "AutomateAgentDeploymentToken" -OutFile "C:\JEM\Dooleys_ServersJEM.MSI";
 
 #Executes Silent removal of old Dooleys Agent
 Invoke-Command -ScriptBlock {Start-Process "C:\JEM\Agent_Uninstall.exe" -ArgumentList "/q" -Wait} 
