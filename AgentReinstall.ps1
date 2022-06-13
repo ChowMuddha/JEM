@@ -21,7 +21,7 @@ Invoke-WebRequest -Uri "$JEMURL" -OutFile "C:\JEM\JEMAgent.MSI";
 
 #Executes silent removal of old Agent
 Invoke-Command -ScriptBlock {Start-Process "C:\JEM\Agent_Uninstall.exe" -ArgumentList "/q" -Wait} 
-Start-Sleep -s 15
+Start-Sleep -s 10
 
 #Installs JEM Agent
 msiexec /i C:\JEM\JEMAgent.MSI /quiet /qn /norestart /log c:\AgentMigration.log
