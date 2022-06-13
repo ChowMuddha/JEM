@@ -14,7 +14,7 @@ Remove-Item $RemovalPath -Force -Recurse
 
 
 Add-Type -AssemblyName Microsoft.VisualBasic
-$JEMURL = [Microsoft.VisualBasic.Interaction]::InputBox('JEM Agent URL:', 'JEM Agent Redployment', "Paste JEM Agent URL Here")
+$JEMURL = [Microsoft.VisualBasic.Interaction]::InputBox('JEM Agent URL:', 'JEM Agent Redeployment', "Paste JEM Agent URL Here")
 
 #Will need to generate new agent download URL and update below based offsite location
 Invoke-WebRequest -Uri "$JEMURL" -OutFile "C:\JEM\JEMAgent.MSI";
