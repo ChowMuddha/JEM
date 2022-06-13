@@ -19,7 +19,7 @@ $JEMURL = [Microsoft.VisualBasic.Interaction]::InputBox('JEM Agent URL:', 'JEM A
 #Will need to generate new agent download URL and update below based offsite location
 Invoke-WebRequest -Uri "$JEMURL" -OutFile "C:\JEM\JEMAgent.MSI";
 
-#Executes silent removal of old Dooleys Agent
+#Executes silent removal of old Agent
 Invoke-Command -ScriptBlock {Start-Process "C:\JEM\Agent_Uninstall.exe" -ArgumentList "/q" -Wait} 
 Start-Sleep -s 15
 
