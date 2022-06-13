@@ -1,5 +1,4 @@
 #JEM Agent Install
-Set-ExecutionPolicy RemoteSigned -Force
 
 #Creates Temp Directory on C:\
 New-Item -Path 'C:\JEM\' -ItemType Directory
