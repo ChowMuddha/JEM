@@ -5,7 +5,7 @@ New-Item -Path 'C:\JEM\' -ItemType Directory
 
 
 Add-Type -AssemblyName Microsoft.VisualBasic
-$JEMURL = [Microsoft.VisualBasic.Interaction]::InputBox('JEM Agent URL:', 'JEM Agent Install', "Paste JEM Agent URL Here")
+$JEMURL = [Microsoft.VisualBasic.Interaction]::InputBox('Automate Agent URL:', 'Agent Install', "Paste Agent URL Here")
 
 #Will need to generate new agent download URL and update below based offsite location
 Invoke-WebRequest -Uri "$JEMURL" -OutFile "C:\JEM\JEMAgent.MSI";
